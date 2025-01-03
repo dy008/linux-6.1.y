@@ -137,11 +137,15 @@
 		compatible = "usb-hub-ctrl";
 		pinctrl-names = "default";
 		pinctrl-0 = <&hub_vcc_en_pin>;
+		// USB2.0 Port Left on
 		hub-vcc-pin = <&gpio4 RK_PC6 GPIO_ACTIVE_HIGH>;
+		// USB2.0 Port Right on
 		host-b-vcc-pin = <&gpio4 RK_PC5 GPIO_ACTIVE_HIGH>;
 		hub-rst-pin1 = <&gpio4 RK_PD0 GPIO_ACTIVE_HIGH>;
+		// USB 5V Power buick on
 		hub-vcc-en-pin = <&gpio0 RK_PC5 GPIO_ACTIVE_HIGH>;
-		device-host-pin = <&gpio3 RK_PC4 GPIO_ACTIVE_LOW>;
+		// USB3.0 Port ON
+		device-host-pin = <&gpio3 RK_PC4 GPIO_ACTIVE_HIGH>;
 		status = "okay";
 	};
 
